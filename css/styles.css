@@ -724,6 +724,11 @@ a:hover {
   text-decoration: none;
 }
 
+.source-phone .phone-alt {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 .source-phone:hover {
   text-decoration: underline;
 }
