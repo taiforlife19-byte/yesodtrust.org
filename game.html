@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scam or Safe? · Yesod Trust Initiative</title>
+  <meta name="description" content="Practice spotting scams with made-up messages, calls, and emails. Learn the warning signs, one scenario at a time.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="wordmark" href="index.html">
+        <span class="wordmark-name">Yesod</span>
+        <span class="wordmark-sub">Trust Initiative</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="game.html" aria-current="page">Scam or Safe?</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="intro">
+      <div class="container">
+        <p class="eyebrow">Practice game</p>
+        <h1>Scam or Safe?</h1>
+        <p class="lead">Read each message, call, or email and decide: is it a scam, or is it safe? After each answer, you’ll see the warning signs explained.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="game">
+
+          <noscript>
+            <div class="note">
+              <p>This game needs JavaScript turned on in your browser. You can still read our <a href="index.html">five habits that help</a> on the home page.</p>
+            </div>
+          </noscript>
+
+          <!-- Start screen -->
+          <div id="game-start" hidden>
+            <p class="sim-label">Educational simulation</p>
+            <h2>How it works</h2>
+            <ul>
+              <li>You’ll see <span id="total-count">12</span> short scenarios, one at a time.</li>
+              <li>Choose <strong>Scam</strong> or <strong>Safe</strong>.</li>
+              <li>You’ll get an explanation and a practical tip after every answer.</li>
+              <li>Take as long as you like. There is no timer.</li>
+            </ul>
+            <div class="note">
+              <p><strong>Everything here is made up.</strong> All names, companies, phone numbers, and web addresses are fictional. Nothing in the game is a real link, and your answers are not saved or sent anywhere.</p>
+            </div>
+            <div class="btn-row">
+              <button type="button" class="btn" id="start-btn">Start the game</button>
+            </div>
+          </div>
+
+          <!-- Play screen -->
+          <div id="game-play" hidden>
+            <div class="progress-wrap">
+              <div class="progress-text">
+                <span id="progress-text">Scenario 1 of 12</span>
+                <span id="score-text">Correct so far: 0</span>
+              </div>
+              <div class="progress-bar" aria-hidden="true"><div class="progress-fill" id="progress-fill"></div></div>
+            </div>
+
+            <article class="scenario" aria-labelledby="scenario-title">
+              <p class="sim-label">Educational simulation · fictional example</p>
+              <h2 id="scenario-title" tabindex="-1">Scenario</h2>
+              <p class="channel" id="scenario-channel"></p>
+              <p class="setup" id="scenario-setup"></p>
+
+              <div class="message">
+                <p class="message-from" id="scenario-from"></p>
+                <p class="message-body" id="scenario-message"></p>
+              </div>
+
+              <p class="question" id="question-label">Is this a scam, or is it safe?</p>
+              <div class="choices" role="group" aria-labelledby="question-label">
+                <button type="button" class="btn choice" id="choice-scam" aria-pressed="false">Scam</button>
+                <button type="button" class="btn choice" id="choice-safe" aria-pressed="false">Safe</button>
+              </div>
+
+              <div class="feedback" id="feedback" hidden>
+                <h3 class="feedback-title" id="feedback-title" tabindex="-1">
+                  <span class="feedback-icon" id="feedback-icon" aria-hidden="true"></span>
+                  <span id="feedback-heading-text">Feedback</span>
+                </h3>
+                <p><span class="verdict" id="feedback-verdict"></span> <span id="feedback-explanation"></span></p>
+                <h3 id="signs-heading">Warning signs</h3>
+                <ul id="signs-list"></ul>
+                <p class="tip"><strong>Tip:</strong> <span id="feedback-tip"></span></p>
+                <div class="next-row">
+                  <button type="button" class="btn" id="next-btn">Next scenario</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Results screen -->
+          <div id="game-results" class="results" hidden>
+            <h2 id="results-heading" tabindex="-1">Your results</h2>
+            <p class="score-big" id="results-score"></p>
+            <p id="results-message"></p>
+            <h3>Habits to remember</h3>
+            <ul>
+              <li>Pause. Real organizations can wait while you check.</li>
+              <li>Call back using a number you already trust.</li>
+              <li>Never share passwords, PINs, or verification codes.</li>
+              <li>Gift cards, wire transfers, and cryptocurrency requests are red flags.</li>
+              <li>Talk it over with someone you trust.</li>
+            </ul>
+            <div class="btn-row">
+              <button type="button" class="btn" id="restart-btn">Play again</button>
+              <a class="btn btn-secondary" href="index.html">Back to home</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>Yesod Trust Initiative</strong> is a student-led educational initiative. The information on this site is for general education and cannot guarantee protection from every scam. When in doubt, contact an organization directly using a phone number or website you already trust.</p>
+      <p>We will never ask you for passwords, bank details, Social Security numbers, or verification codes.</p>
+    </div>
+  </footer>
+
+  <script src="js/scenarios.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
