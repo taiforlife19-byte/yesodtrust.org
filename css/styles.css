@@ -669,6 +669,77 @@ a:hover {
   .join-panel { padding: 1.75rem 1.25rem; }
 }
 
+/* ---------- Trusted sources ---------- */
+
+.source-grid {
+  list-style: none;
+  padding: 0;
+  margin: 1.75rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+  gap: 1rem;
+}
+
+.source-card {
+  margin: 0;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.4rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-alt .source-card {
+  background: var(--ivory);
+}
+
+.source-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.2rem;
+  color: var(--navy);
+}
+
+.source-card p {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+}
+
+.source-note {
+  color: var(--muted);
+}
+
+.source-links {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.source-phone {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.source-phone:hover {
+  text-decoration: underline;
+}
+
+.source-web {
+  font-weight: 600;
+  color: var(--blue-text);
+  overflow-wrap: anywhere;
+}
+
+.checked-note {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 2.5rem 0 0;
+}
+
 /* ---------- Contact ---------- */
 
 .contact-list {

@@ -9,6 +9,7 @@ A small, static educational website that helps older adults recognize modern sca
 | `index.html` | Home page |
 | `about.html` | About Us |
 | `game.html` | The "Scam or Safe?" practice game |
+| `resources.html` | Trusted Sources: helplines, where to report, identity protection, and learning links (all real, official sources; re-check numbers and links every few months) |
 | `contact.html` | Contact details and privacy note |
 | `js/scenarios.js` | **All game scenarios.** Edit this file to change, add, or remove scenarios. |
 | `js/game.js` | Game logic (you shouldn't need to edit this) |
@@ -23,7 +24,7 @@ There is no build step, framework, database, analytics, or tracking. The site is
 
 - **Page text:** open the `.html` file and change the words between the tags.
 - **Game scenarios:** open `js/scenarios.js`. Each scenario is one `{ ... }` block. Instructions are at the top of the file. The game automatically adjusts to however many scenarios there are.
-- **Header and footer** are repeated in each of the four pages. If you change one, change all four.
+- **Header and footer** are repeated in each of the five pages. If you change one, change all five.
 
 ## Content rules (from the project brief)
 
