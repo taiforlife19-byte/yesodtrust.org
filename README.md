@@ -46,3 +46,7 @@ The site is designed for GitHub Pages: in the repository's **Settings → Pages*
 ## Team photos
 
 Noam Tamir's photo is a blank placeholder circle for now. To add it, save a square photo as `images/team/noam-tamir.jpg` and follow the comment in `about.html` next to his name.
+
+## Join the team form
+
+The "Apply to join" button on the About page links to a Google Form owned by Amitai (responses land in his Google Forms account). To change the form, edit it in Google Forms; to point the button elsewhere, change the link in `about.html`.
