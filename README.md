@@ -13,6 +13,7 @@ A small, static educational website that helps older adults recognize modern sca
 | `js/scenarios.js` | **All game scenarios.** Edit this file to change, add, or remove scenarios. |
 | `js/game.js` | Game logic (you shouldn't need to edit this) |
 | `css/styles.css` | Colors, fonts, and layout. Brand colors are at the top. |
+| `images/` | Logo (`logo.png`) and browser-tab icon (`favicon.png`) |
 | `fonts/` | Self-hosted Playfair Display and Montserrat (SIL Open Font License) |
 
 There is no build step, framework, database, analytics, or tracking. The site is plain HTML, CSS, and JavaScript. To preview it, open `index.html` in a browser.
@@ -36,7 +37,7 @@ The site is designed for GitHub Pages: in the repository's **Settings → Pages*
 
 ## Decisions and assumptions
 
-- Text wordmark used in place of a logo until an approved logo exists.
+- Logo cropped from a small (182×141) image supplied by the owner. Replace `images/logo.png` with a higher-resolution square version (at least 640×640, transparent outside the circle) when available.
 - 12 scenarios (7 scams, 5 safe), fixed order, no difficulty levels, nothing saved between visits.
 - English only.
 - The fraud-reporting reference (ReportFraud.ftc.gov) assumes a U.S. audience.

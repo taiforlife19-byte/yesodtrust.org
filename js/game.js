@@ -21,7 +21,27 @@
 
   var progressText = $("progress-text");
   var scoreText = $("score-text");
-  var progressFill = $("progress-fill");
+  var progressSteps = $("progress-steps");
+  var channelIcon = $("scenario-channel-icon");
+  var messageBox = $("scenario-message-box");
+
+  // Simple line icons for each way a message can arrive
+  var ICON_PATHS = {
+    chat: '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/>',
+    email: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+    voice: '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/>',
+    video: '<rect x="2" y="6" width="14" height="12" rx="2"/><path d="m16 10 6-3v10l-6-3"/>',
+    popup: '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>'
+  };
+
+  function kindOf(channel) {
+    var c = (channel || "").toLowerCase();
+    if (c.indexOf("email") > -1) return "email";
+    if (c.indexOf("pop-up") > -1) return "popup";
+    if (c.indexOf("video") > -1) return "video";
+    if (c.indexOf("phone") > -1 || c.indexOf("voicemail") > -1) return "voice";
+    return "chat";
+  }
 
   var channelEl = $("scenario-channel");
   var titleEl = $("scenario-title");
@@ -54,13 +74,21 @@
   function updateProgress(answeredCount) {
     progressText.textContent = "Scenario " + (index + 1) + " of " + total;
     scoreText.textContent = "Correct so far: " + score;
-    progressFill.style.width = Math.round((answeredCount / total) * 100) + "%";
+    var steps = progressSteps.children;
+    for (var i = 0; i < steps.length; i++) {
+      steps[i].className = i < answeredCount ? "done" : (i === index ? "current" : "");
+    }
   }
 
   function renderScenario() {
     var s = scenarios[index];
 
     setText(channelEl, s.channel);
+    var kind = kindOf(s.channel);
+    channelIcon.innerHTML =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      ICON_PATHS[kind] + "</svg>";
+    messageBox.setAttribute("data-kind", kind === "video" ? "voice" : kind);
     titleEl.textContent = s.title;
     setText(setupEl, s.setup);
     setText(fromEl, s.from);
@@ -114,6 +142,8 @@
   function showResults() {
     hide(playPanel);
     $("results-score").textContent = score + " of " + total + " correct";
+    $("results-num").textContent = String(score);
+    $("results-of").textContent = "of " + total + " correct";
 
     var msg;
     if (score === total) {
@@ -142,6 +172,9 @@
   if (!total) return;
 
   $("total-count").textContent = String(total);
+  for (var n = 0; n < total; n++) {
+    progressSteps.appendChild(document.createElement("span"));
+  }
   show(startPanel);
 
   $("start-btn").addEventListener("click", start);

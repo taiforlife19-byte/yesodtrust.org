@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Yesod Trust Initiative</title>
   <meta name="description" content="A student-led educational initiative helping older adults recognize modern scams, understand AI-enabled fraud, and protect the trust between families.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preload" href="fonts/playfair-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -12,9 +14,12 @@
 
   <header class="site-header">
     <div class="container">
-      <a class="wordmark" href="index.html">
-        <span class="wordmark-name">Yesod</span>
-        <span class="wordmark-sub">Trust Initiative</span>
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="" width="64" height="64">
+        <span class="brand-text">
+          <span class="brand-name">Yesod</span>
+          <span class="brand-sub">Trust Initiative</span>
+        </span>
       </a>
       <nav class="site-nav" aria-label="Main">
         <ul>
@@ -28,31 +33,41 @@
   </header>
 
   <main id="main">
-    <section class="intro">
-      <div class="container">
-        <p class="eyebrow">A student-led educational initiative</p>
-        <h1>Trust is a foundation.<br>Let’s keep it strong.</h1>
-        <p class="lead">Scams are changing. Messages look more convincing, and new technology can even imitate the voice of someone you love. Yesod offers clear, practical education to help older adults spot the warning signs and respond with confidence.</p>
-        <div class="btn-row">
-          <a class="btn" href="game.html">Play “Scam or Safe?”</a>
-          <a class="btn btn-secondary" href="about.html">Learn about us</a>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">A student-led educational initiative</p>
+          <h1 class="bar">Trust is a foundation. Let’s keep it strong.</h1>
+          <p class="lead">Scams are changing. Messages look more convincing, and new technology can even imitate the voice of someone you love. Yesod offers clear, practical education to help older adults spot the warning signs and respond with confidence.</p>
+          <div class="btn-row">
+            <a class="btn" href="game.html">Play “Scam or Safe?” <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn-secondary" href="about.html">Learn about us</a>
+          </div>
         </div>
+        <figure class="hero-figure">
+          <img class="hero-logo" src="images/logo.png" alt="Yesod Trust Initiative logo: two hands sheltering a family" width="320" height="320">
+          <figcaption><span class="hebrew" lang="he" dir="rtl">יסוד</span><br>Hebrew for “foundation”</figcaption>
+        </figure>
       </div>
     </section>
 
     <section class="section" aria-labelledby="offer-heading">
       <div class="container">
-        <h2 id="offer-heading">What you’ll find here</h2>
+        <p class="eyebrow">What you’ll find here</p>
+        <h2 id="offer-heading" class="bar">Practical help, in plain language</h2>
         <div class="grid">
           <div class="card">
-            <h3>Practice with real-world examples</h3>
+            <span class="card-num" aria-hidden="true">1</span>
+            <h3>Practice with realistic examples</h3>
             <p>Our “Scam or Safe?” game shows made-up messages, calls, and emails. You decide what you think, then see the warning signs explained.</p>
           </div>
           <div class="card">
-            <h3>Plain-language guidance</h3>
+            <span class="card-num" aria-hidden="true">2</span>
+            <h3>Clear explanations</h3>
             <p>No jargon. We explain what new technology like artificial intelligence (AI) can do, and what simple steps keep you in control.</p>
           </div>
           <div class="card">
+            <span class="card-num" aria-hidden="true">3</span>
             <h3>Help for families, too</h3>
             <p>Caregivers, relatives, and staff at senior communities can use these materials to start a calm, helpful conversation.</p>
           </div>
@@ -61,9 +76,15 @@
     </section>
 
     <section class="section section-alt" aria-labelledby="habits-heading">
-      <div class="container">
-        <h2 id="habits-heading">Five habits that help</h2>
-        <p class="prose">You don’t need to be a technology expert to stay safer. These habits work for phone calls, text messages, emails, and letters.</p>
+      <div class="container split">
+        <div class="split-aside">
+          <p class="eyebrow">Five habits that help</p>
+          <h2 id="habits-heading" class="bar">You don’t need to be a technology expert</h2>
+          <p>These habits work for phone calls, text messages, emails, and letters, whatever new tricks appear.</p>
+          <div class="btn-row">
+            <a class="btn" href="game.html">Practice these habits <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
         <ol class="habits">
           <li><strong>Pause before you act.</strong> Scammers create a rush. A real bank, doctor, or family member can wait a few minutes while you check.</li>
           <li><strong>Check using a number you already trust.</strong> Hang up and call the number on your card, statement, or the organization’s official website, not a number given in the message.</li>
@@ -71,30 +92,47 @@
           <li><strong>Be careful with unusual payments.</strong> Requests for gift cards, wire transfers, cryptocurrency, or cash pickups are common signs of a scam.</li>
           <li><strong>Talk it over.</strong> Ask a family member or friend before acting. Some families choose a private code word to confirm real emergencies.</li>
         </ol>
-        <div class="btn-row">
-          <a class="btn" href="game.html">Practice these habits</a>
-        </div>
       </div>
     </section>
 
     <section class="section" aria-labelledby="help-heading">
-      <div class="container"><div class="prose">
-        <h2 id="help-heading">If you think you’ve been scammed</h2>
-        <p>It can happen to anyone, at any age. Acting quickly helps.</p>
-        <ul>
-          <li>Call your bank or card company using the number on the back of your card.</li>
-          <li>Tell someone you trust what happened.</li>
-          <li>Change any passwords you may have shared.</li>
-          <li>In the United States, you can report fraud to the Federal Trade Commission at <a href="https://reportfraud.ftc.gov/">ReportFraud.ftc.gov</a>.</li>
-        </ul>
-      </div></div>
+      <div class="container">
+        <div class="help-panel">
+          <div>
+            <h2 id="help-heading" class="bar">If you think you’ve been scammed</h2>
+            <p>It can happen to anyone, at any age. Acting quickly helps.</p>
+          </div>
+          <ul>
+            <li>Call your bank or card company using the number on the back of your card.</li>
+            <li>Tell someone you trust what happened.</li>
+            <li>Change any passwords you may have shared.</li>
+            <li>In the United States, you can report fraud to the Federal Trade Commission at <a href="https://reportfraud.ftc.gov/">ReportFraud.ftc.gov</a>.</li>
+          </ul>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p><strong>Yesod Trust Initiative</strong> is a student-led educational initiative. The information on this site is for general education and cannot guarantee protection from every scam. When in doubt, contact an organization directly using a phone number or website you already trust.</p>
-      <p>We will never ask you for passwords, bank details, Social Security numbers, or verification codes.</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="" width="64" height="64">
+          <p><strong>Yesod Trust Initiative</strong> is a student-led educational initiative. The information on this site is for general education and cannot guarantee protection from every scam. When in doubt, contact an organization directly using a phone number or website you already trust.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="game.html">Scam or Safe?</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>We will never ask you for passwords, bank details, Social Security numbers, or verification codes.</p>
+      </div>
     </div>
   </footer>
 </body>

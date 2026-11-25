@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Us · Yesod Trust Initiative</title>
   <meta name="description" content="Why modern scams matter, and how the Yesod Trust Initiative uses respectful, practical education to help older adults stay safer.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preload" href="fonts/playfair-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -12,9 +14,12 @@
 
   <header class="site-header">
     <div class="container">
-      <a class="wordmark" href="index.html">
-        <span class="wordmark-name">Yesod</span>
-        <span class="wordmark-sub">Trust Initiative</span>
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="" width="64" height="64">
+        <span class="brand-text">
+          <span class="brand-name">Yesod</span>
+          <span class="brand-sub">Trust Initiative</span>
+        </span>
       </a>
       <nav class="site-nav" aria-label="Main">
         <ul>
@@ -28,32 +33,45 @@
   </header>
 
   <main id="main">
-    <section class="intro">
+    <section class="page-intro">
       <div class="container">
         <p class="eyebrow">About us</p>
-        <h1>Protecting trust and family connections</h1>
+        <h1 class="bar">Protecting trust and family connections</h1>
         <p class="lead">We give older adults the knowledge and practical tools to recognize modern scams and stay safer in an increasingly AI-driven world.</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="container"><div class="prose">
-        <h2>Our name</h2>
-        <p><span lang="he" dir="rtl">יסוד</span> (Yesod) is the Hebrew word for <em>foundation</em>. We chose it because trust is the foundation of every relationship, family, and community, and it is exactly what scammers try to exploit.</p>
+      <div class="container split">
+        <div class="split-aside">
+          <p class="eyebrow">Our name</p>
+          <div class="name-block">
+            <span class="hebrew-large" lang="he" dir="rtl">יסוד</span>
+            <h2 class="bar">Yesod means “foundation”</h2>
+          </div>
+        </div>
+        <div class="prose">
+          <p>We chose the name because trust is the foundation of every relationship, family, and community, and it is exactly what scammers try to exploit.</p>
 
-        <h2>Why this matters</h2>
-        <p>Scams have always existed, but they are changing. Today a fraudulent message can look just like one from your bank. A phone call can come from a number that appears familiar. And artificial intelligence (AI), computer software that can produce text, images, and sound, can now imitate a real person’s voice from a short recording.</p>
-        <p>These scams work by creating urgency and borrowing the trust we place in people and institutions. They can affect anyone. Knowing what to look for, and having a simple plan for checking, makes a real difference.</p>
+          <h2 class="bar">Why this matters</h2>
+          <p>Scams have always existed, but they are changing. Today a fraudulent message can look just like one from your bank. A phone call can come from a number that appears familiar. And artificial intelligence (AI), computer software that can produce text, images, and sound, can now imitate a real person’s voice from a short recording.</p>
+          <p>These scams work by creating urgency and borrowing the trust we place in people and institutions. They can affect anyone. Knowing what to look for, and having a simple plan for checking, makes a real difference.</p>
 
-        <h2>Who we are</h2>
-        <p>The Yesod Trust Initiative is a student-led educational initiative. We create free learning materials and practice activities that explain modern scams in plain language.</p>
+          <h2 class="bar">Who we are</h2>
+          <p>The Yesod Trust Initiative is a student-led educational initiative. We create free learning materials and practice activities that explain modern scams in plain language.</p>
+        </div>
+      </div>
+    </section>
 
-        <h2>Our approach</h2>
-        <ul>
-          <li><strong>Respect first.</strong> Older adults bring a lifetime of judgment and experience. We build on that; we never talk down.</li>
-          <li><strong>Practice, not fear.</strong> Trying realistic, made-up examples builds confidence that a warning or a news story alone can’t.</li>
-          <li><strong>Plain language.</strong> We explain technical terms simply and focus on steps anyone can take.</li>
-          <li><strong>Family connection.</strong> Talking openly about scams with relatives and caregivers helps everyone stay safer together.</li>
+    <section class="section section-alt" aria-labelledby="approach-heading">
+      <div class="container">
+        <p class="eyebrow">How we teach</p>
+        <h2 id="approach-heading" class="bar">Our approach</h2>
+        <ul class="principles">
+          <li><strong>Respect first</strong> Older adults bring a lifetime of judgment and experience. We build on that; we never talk down.</li>
+          <li><strong>Practice, not fear</strong> Trying realistic, made-up examples builds confidence that a warning or a news story alone can’t.</li>
+          <li><strong>Plain language</strong> We explain technical terms simply and focus on steps anyone can take.</li>
+          <li><strong>Family connection</strong> Talking openly about scams with relatives and caregivers helps everyone stay safer together.</li>
         </ul>
 
         <div class="note">
@@ -61,17 +79,33 @@
         </div>
 
         <div class="btn-row">
-          <a class="btn" href="game.html">Try “Scam or Safe?”</a>
+          <a class="btn" href="game.html">Try “Scam or Safe?” <span class="arrow" aria-hidden="true">→</span></a>
           <a class="btn btn-secondary" href="contact.html">Get in touch</a>
         </div>
-      </div></div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p><strong>Yesod Trust Initiative</strong> is a student-led educational initiative. The information on this site is for general education and cannot guarantee protection from every scam. When in doubt, contact an organization directly using a phone number or website you already trust.</p>
-      <p>We will never ask you for passwords, bank details, Social Security numbers, or verification codes.</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="" width="64" height="64">
+          <p><strong>Yesod Trust Initiative</strong> is a student-led educational initiative. The information on this site is for general education and cannot guarantee protection from every scam. When in doubt, contact an organization directly using a phone number or website you already trust.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="game.html">Scam or Safe?</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>We will never ask you for passwords, bank details, Social Security numbers, or verification codes.</p>
+      </div>
     </div>
   </footer>
 </body>
