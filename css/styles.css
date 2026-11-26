@@ -640,6 +640,23 @@ a:hover {
   outline-color: var(--paper);
 }
 
+.join-panel-solo {
+  grid-template-columns: minmax(0, 1fr) auto;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-left: 6px solid var(--navy);
+}
+
+.join-panel-solo .eyebrow { color: var(--blue-text); }
+.join-panel-solo h2 { color: var(--navy); }
+.join-panel-solo .bar::after { background: var(--soft-blue); }
+.join-panel-solo :focus-visible { outline-color: var(--navy); }
+
+.join-panel-solo .btn-row {
+  margin: 0;
+}
+
 .btn-light {
   background: var(--paper);
   border-color: var(--paper);
@@ -1237,24 +1254,7 @@ a:hover {
   .choices { grid-template-columns: 1fr; }
   .section { padding: 2.75rem 0; }
   .hero { padding: 2.5rem 0; }
-  .mission {
-  max-width: 44rem;
-  margin-top: 1.75rem;
-}
-
-.mission p {
-  font-family: var(--serif);
-  font-size: clamp(1.3rem, 2.6vw, 1.6rem);
-  line-height: 1.5;
-  color: var(--navy);
-  margin-bottom: 0.8em;
-}
-
-.mission p:last-child {
-  margin-bottom: 0;
-}
-
-.page-intro { padding: 2.25rem 0 2rem; }
+  .page-intro { padding: 2.25rem 0 2rem; }
   .start-card, .scenario, .results { padding: 1.25rem; }
   .help-panel { padding: 1.75rem 1.25rem 0.75rem; }
   .brand img { width: 2.8rem; height: 2.8rem; }
